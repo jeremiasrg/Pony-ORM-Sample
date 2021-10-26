@@ -4,19 +4,19 @@ import os
 db_host = 'localhost'
 if os.environ.get('DB_HOST') != None:
     db_host = os.environ.get('DB_HOST')
-db_user = 'root'
+db_user = 'admin'
 if os.environ.get('DB_USER') != None:
     db_user = os.environ.get('DB_USER')
-db_pass = ''
+db_pass = '123'
 if os.environ.get('DB_PASS') != None:
     db_pass = os.environ.get('DB_PASS')
 
 db = Database()
-db.bind(provider='mysql',
+db.bind(provider='postgres',
         host=db_host,
         user=db_user,
-        passwd=db_pass,
-        db='soccer_teams')
+        password=db_pass,
+        database='soccer_teams')
 
 
 class Team(db.Entity):

@@ -15,6 +15,7 @@ app = Flask(__name__)
 app.config['ELASTIC_APM'] = apm.apm_config.config()
 
 apm = ElasticAPM(app, logging=True)
+# apm = ElasticAPM(app)
 
 
 @app.route('/team/getAll', methods=['GET'])

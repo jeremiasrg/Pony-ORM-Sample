@@ -11,7 +11,7 @@ def config():
     if os.environ.get('APP_NAME') != None:
         app_name = os.environ.get('APP_NAME')
 
-    service_name = 'Team-Pony-Test'
+    service_name = 'Jeremy'
     if os.environ.get('SERVICE_NAME') != None:
         service_name = os.environ.get('SERVICE_NAME')
 
